@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pocket Simon FCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39|Roboto|Roboto+Mono|Share+Tech+Mono|VT323|Alfa+Slab+One" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel='stylesheet prefetch' href='https://codepen.io/djorborn/pen/aqNVdq.css'>
+
+  
+  
+</head>
+
+<body>
+
+  <div id="app">
+  <div class="section padding-top-2">
+    <div class="container">
+      <div class="game-pads-container">
+        <div class="center-dot">
+          <div class="logo-container">
+            <div class="logo">Simon®</div>
+          </div>
+        </div>
+        <div class="pad-container box">
+          <div class="pad red" :class="pad[0].c"></div>
+          <div class="pad blue" :class="pad[1].c"></div>
+          <div class="pad green" :class="pad[2].c"></div>
+          <div class="pad yellow" :class="pad[3].c"></div>
+        </div>
+      </div>
+      <div class="bottom-container">
+        <div class="bottom">
+          <div class="interface-container"></div>
+        </div>
+      </div>
+      <div class="interface">
+        <div class="row">
+          <div class="column">
+            <button title="Start" @click="startGame">
+              <div class="fa fa-play"></div>
+            </button>
+          </div>
+          <div class="column">
+            <button title="Restart">
+              <div class="fa fa-undo"></div>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="moves">
+              <div class="count">000</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="label" style="left: 81px">
+              <p style="font-family:'Alfa Slab One';">off on</p>
+            </div>
+            <label class="on-off">
+              <input type="checkbox" v-model="onOff"/><span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
